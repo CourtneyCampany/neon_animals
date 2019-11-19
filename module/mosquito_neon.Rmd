@@ -32,3 +32,19 @@ NEON maintains a monitoring site at the Blandy Experimental Farm (University of 
 
 ## Goal: Estimate the 'disease danger days' at each field site 
 
+
+## Learning objectives
+
+Upon completion of the module, students will be able to:
+
+
+## Data description
+The data used in this module are from the three terrestrial field sites in NEON’s Domain 02, the Mid Atlantic, and include
+BLAN, SCBI, and SERC. For field site descriptions and full names see the NEON field sites webpages
+(https://www.neonscience.org/field-sites/field-sites-map). The data are from June 2015 to December 2016.
+1
+
+Faculty who want to use a more recent data or data from another location are encouraged to use the NEON data portal (data.neonscience.org) to create a customized data set.
+
+##
+
