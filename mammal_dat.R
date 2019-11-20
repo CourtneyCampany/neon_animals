@@ -20,7 +20,7 @@ stackByTable("data_downloads/NEON_pathogens-mosquito.zip",
 #              savepath="weather_raw/rain")
 
 stackByTable("data_downloads/NEON_weather-stats.zip",
-             savepath="raw_data/weather")
+             savepath="raw_data/NEON_weather")
 
 # stackByTable("data_downloads/NEON_rel-humidity.zip",
 #              savepath="weather_raw/humidity")
