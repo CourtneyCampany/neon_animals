@@ -18,7 +18,7 @@ knitr::knit_hooks$set(plot = function(x, options) {
 
 ```
 
-## Mosquito Vector Ecology of the East Coast using NEON
+## Mosquito Vector Ecology of the East Coast using NEON data
 \
 **Name:** 
 \
@@ -87,9 +87,11 @@ a) Does the total diversity of species change with latitude?
 \
 \
 \
+\
 
 b) Are there patterns in occurrence of disease carrying mosquitoes or prevalence of pathogens with latitude?
 
+\
 \
 \
 \
@@ -105,12 +107,9 @@ b) Are there patterns in occurrence of disease carrying mosquitoes or prevalence
 \
 \
 \
-\
-\
 
 6) Perform a web search for the life cycle of mosquitoes. How is the life cycle impacted by climate variables? What role do you believe this plays in the occurrence of mosquitoes at the 3 NEON sites?
 
-\
 \
 \
 \
@@ -167,7 +166,6 @@ Figure 1. Temperature range for transmission of diseases spread by mosquitoes of
 
 10) Global change encompasses more than just shifts in climate. From what you have learned, do you believe increasing urbanization will impact the prevalence of mosquito-borne diseases in the future? 
 
-\
 \
 \
 \

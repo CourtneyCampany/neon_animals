@@ -11,7 +11,7 @@ This module contains a word document and data files to be self sufficient. Howev
 
 \
 
-word:
+git@github.com:CourtneyCampany/neon_vector_ecology_module.git
 
 \
 
