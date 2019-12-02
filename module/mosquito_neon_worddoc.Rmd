@@ -1,10 +1,21 @@
 ---
 title: ""
-output: html_document
+output:
+  word_document:
+    reference_docx: manuscriptstyle.docx
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+default_plot_hook <- knitr::knit_hooks$get('plot')
+
+knitr::knit_hooks$set(plot = function(x, options) {
+  default_md <- default_plot_hook(x, options)
+  link_attr <- sprintf("{width=%sin height=%sin}", options$fig.width, options$fig.height)
+  sub("(!\\[.*]\\(.*\\))", paste0("\\1", link_attr), default_md)
+})
+
 ```
 
 ## Mosquito Vector Ecology of the East Coast using NEON
@@ -23,43 +34,102 @@ The National Ecology Observation Network (NEON) maintains long-term ecological m
 1) The most prominent mosquito-borne diseases are transmitted by three genera of mosquitoes – *Aedes*, *Culex*, and *Anopheles*. Perform web searches for these genera of mosquitoes in the United States. Identify and report target mosquito species that are currently of high concern for disease transmission on the East Coast of the United States. 
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
 
 <!-- Two species, *Aedes aegypti* (yellow fever) and *Aedes albopictus* (southern house mosquito), carry several of these dangerous diseases but currently have a limited range in the United States. These two species tend to be mostly  found in the South and Southeast, however, the range of *Aedes albopictus* extends into northeast towards New York. Anopheles mosquitoes are best known for spreading malaria, Anopheles quadrimaculatus carries malaria but the disease has been wiped out. Culex pipiens and Culex tarsalis are most likely to carry west nile virus. -->
 
 2) Are the species you have identified classified as native or non-native to the United States? What role do you believe this plays in rates of disease transmission in this country?
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
 
 3) In 2017, there were an estimated 219 million cases of malaria in 87 countries. According to the latest World Malaria report^2^, the USA spent ~ 3.1 billion in 2017 for malaria control and elimination. The United States, however, shares a relatively low burden of malaria on the global scale. Examine the center for disease control's (CDC) website and summarize the history of the CDC and malaria as a major public health problem in the USA.
 
 \
+\
+\
+\
+\
+\
+\
+\
+
 
 ## Vector ecology of mosquitoes in eastern USA
 
 This module includes data for mosquito collection, pathogen status and climate variables from three NEON collection sites; Ordway-Swisher Biological Station, Blandy Experimental Farm and Harvard Forest. Using data from the last 24 months at each site, answer the following questions to build an understanding of ecological vector status and risk of transmission along a latitudinal gradient on the east coast of the United States.
 
 \
-
 4) Using the available data, explore the prevalence of mosquitoes at each experimental site. 
 
-  a) Does the total diversity of species change with latitude? 
+a) Does the total diversity of species change with latitude? 
 
 \
+\
+\
+\
+\
 
-  b) Are there patterns in occurrence of disease carrying mosquitoes or prevalence of pathogens with latitude?
+b) Are there patterns in occurrence of disease carrying mosquitoes or prevalence of pathogens with latitude?
 
+\
+\
+\
+\
 \
 
 5) Using recent monthly climate data for each site (weather_summary.csv), visualize and then report patterns in climate variables that may help explain any trends you report in Q4.
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
 
 6) Perform a web search for the life cycle of mosquitoes. How is the life cycle impacted by climate variables? What role do you believe this plays in the occurrence of mosquitoes at the 3 NEON sites?
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
 
 7) Mosquitoes thrive in a diverse array of habitats?  Examine the current locations of NEON field sites (https://www.neonscience.org/field-sites/field-sites-map). Why might field site location impact the usability of NEON data as indices for disease transmission? Give an example.
 
+\
+\
+\
+\
+\
+\
+\
 \
 
 ## Will global change affect mosquito prevalence and disease transmission?
@@ -67,32 +137,57 @@ This module includes data for mosquito collection, pathogen status and climate v
 Among the consequences of global change are impacts on the spread of some diseases spread by biting mosquitoes. To examine the role temperature plays in disease transmission from mosquitoes, Climate Central (www.https://www.climatecentral.org/) analyzed the number of days each year in the spring, summer, and fall with an average temperature between 61 degrees and 93 degrees Fahrenheit (**'Disease Danger Days'**, Figure 1).
 \
 
-![](2018Mosquitoes_Editorial_TransmissionCurve.jpg)
+![](2018Mosquitoes_Editorial_TransmissionCurve.jpg){width=6in height=3in}
 
 Figure 1. Temperature range for transmission of diseases spread by mosquitoes of the *Aedes* or *Culex* type.
 
 8) Plot the monthly average temperature for each of the three NEON field sites. For each site, calculate a rough estimate of the 'disease danger days' for a calendar year. 
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
 
 9) A recent study by Rochlin et al. 2013^1^ predicts a role of climate change in range expansion of the Asian Tiger Mosquito in north-eastern USA. Using your findings from previous questions, summarize how shifts in atmospheric carbon dioxide, temperature and precipitation might impact the the prevalence of mosquito-borne diseases (current and/or new) across the USA. Do you believe there be regions in the USA where mosquito-borne diseases could decline?
 
+\
+\
+\
+\
+\
+\
+\
+\
 \
 
 10) Global change encompasses more than just shifts in climate. From what you have learned, do you believe increasing urbanization will impact the prevalence of mosquito-borne diseases in the future? 
 
 \
+\
+\
+\
+\
+\
+\
+\
+\
 
-<!-- ![](mosquitoes.png) -->
+<!-- ![](tigermosquitorange.png){width=3in height=3in} -->
 
 <!-- Figure 2 . Potential range expansion of Asian Tiger mosquito under high future CO^2^ emissions scenario (from Rochlin et al. 2013).  -->
+\
 
 ## Works Cited
 
 1. Rochlin I, Ninivaggi DV, Hutchinson ML, Farajollahi A (2013) Climate Change and Range Expansion of the Asian Tiger Mosquito (Aedes albopictus) in Northeastern USA: Implications for Public Health Practitioners. PLOS ONE 8(4): e60874.
 \
 
-2. WHO: World Malaria Report. https://www.who.int/malaria/publications/world-malaria-report-2018/en/. Date last accessed: 02 Decemember 2019. 
+2. WHO: World Malaria Report. https://www.who.int/malaria/publications/world-malaria-report-2018/en/. Date last accessed: 02 December 2019. 
 
 
 

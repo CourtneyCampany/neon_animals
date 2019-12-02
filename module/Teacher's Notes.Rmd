@@ -1,0 +1,58 @@
+---
+title: "Teacher's Notes"
+output:
+  word_document:
+    reference_docx: manuscriptstyle.docx
+---
+
+## Module Materials
+
+This module contains a word document and data files to be self sufficient. However, this module was designed to be completely reproducible and modifiable. Code for NEON data processing, raw and processed data files and Markdown files for presenting the assignment as an html or word document are included in the github repository:
+
+\
+
+word:
+
+\
+
+The github repository allows faculty to easily modify the module to use more recent data or data from other locations via the NEON data portal (data.neonscience.org) to create customized data sets. Additionally, the markdown files allows full integration of R workflows (though code chunks) to complete and submit the assignment. The basic module design also allows simple integration into classrooms that do not utilize the R programming language.  
+
+
+## Module Goals
+
+1) Explore any differences between pathogen status and mosquito populations along a latitudinal gradient of NEON field sites on the east coast of the United States.
+\
+
+2) Gain a broad understanding the relationships between animal disease vectors and common environmental drivers.
+\
+
+3) Gain awareness of the potential for NEON data to investigate disease ecology.
+\
+
+4) Apply quantitative reasoning and critical thinking to explore future relationships between changing climates and vector ecology.
+\
+
+5) Understand the important history of malaria-specific vector ecology in the United States and beyond.
+
+## Learning objectives
+
+Upon completion of the module, students will be able to:
+
+* download and wrangle NEON data
+* visualize environmental data sets
+* produce reproducible results (if using R)
+* critically evaluate relationships between disease vectors, climate, habitat type and global change
+
+## Lesson Plan:
+* A brief review of vector ecology and why it matters for multiple biological fields.  
+* The format of the module will depend on available time:
+    + lecture time slots: clean data in excel with questions (shorten for 50 min lecture)
+    + lab slots: produce reproducible worksheet (markdown) with figures and code. Depending on coding level, the students can be given the raw data 'stacked' data or cleaned data sets (both are available)
+    + this assignment code also be assigned as homework
+* If in class, module will work best in small groups with one computer
+* Follow-up: have students download and explore tick collections and pathogen status within the selected sites and climate data.
+
+## Data description
+The data used in this module are from the three terrestrial NEON field sites, and include Ordway-Swisher Biological Station, Blandy Experimental Farm and Harvard Forest. For field site descriptions and full names see the NEON field sites webpages.
+(https://www.neonscience.org/field-sites/field-sites-map). The included data are from June 2015 to December 2016. Climate summary data were not available for one site, so they were substituted from the nearest field site.
+
